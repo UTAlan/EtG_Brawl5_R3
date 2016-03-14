@@ -1,9 +1,10 @@
 html,body {
-    background: url('../images/bg_low.png') no-repeat center center fixed;
+    background: #000 url('../images/bg_low.png') no-repeat center center fixed;
     -webkit-background-size: cover; /* For WebKit*/
     -moz-background-size: cover;    /* Mozilla*/
     -o-background-size: cover;      /* Opera*/
     background-size: cover;         /* Generic*/
+    height: 100%;
 }
 .logo { width: 100%; }
 #bg_load { display: none; }
