@@ -5,7 +5,7 @@ html,body {
     -o-background-size: cover;      /* Opera*/
     background-size: cover;         /* Generic*/
 }
-.logo { width: 100%; visibility: hidden; }
+.logo { width: 100%; }
 #bg_load { display: none; }
 .content { 
     padding: 20px;

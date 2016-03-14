@@ -251,6 +251,6 @@ $(function() {
     });
 
     $("#bg_load").one("load", function() {
-        $("html,body").css("background-image", "url('includes/images/bg.png')");
-    }).attr("src", "includes/images/bg.png");
+        $("html,body").css("background-image", "url('includes/images/bg.jpg')");
+    }).attr("src", "includes/images/bg.jpg");
 });
