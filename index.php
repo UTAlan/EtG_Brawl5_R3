@@ -34,7 +34,7 @@ if(!empty($_GET['reset']) && !empty($_GET['code']) && (time() - substr($_GET['co
         </div>
 
         <div class="row contentWrapper">
-            <div class="content col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+            <div class="content col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <?php echo '<audio id="bg_music" autoplay loop><source src="includes/music/' . (mt_rand(1, 100) == 100 ? 'chaosomes' : 'theme') . '.mp3"></audio>'; ?>
                 <div class="row" id="messageWrapper">
                     <div class="col-sm-10 col-sm-offset-1">
