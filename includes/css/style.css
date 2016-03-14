@@ -33,11 +33,11 @@ html,body {
 #signupLink, #signup_submit { width: 45%; margin-left: 5%; }
 #troubleLink { width: 100%; }
 #errorWrapper, #successWrapper, #signupFormWrapper, #troubleFormWrapper, #resetFormWrapper { display: none; }
-.footer { margin-top: 50px; color: #FFF; text-shadow: 1px 1px #000; font-size: 0.8em; }
-.footer a { color: #FFF; text-decoration: underline; text-shadow: 1px 1px #000; }
+footer { position: fixed; bottom: 0; width: 100%; color: #FFF; text-shadow: 1px 1px #000; font-size: 0.8em; }
+footer a { color: #FFF; text-decoration: underline; text-shadow: 1px 1px #000; }
 .center { text-align: center; }
 .right { text-align: right; }
 .hidden { display: none; }
 @media screen and (max-width: 480px) {
-    .footer p { text-align: center !important; }
+    footer p { text-align: center !important; }
 }

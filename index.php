@@ -99,26 +99,31 @@ if(!empty($_GET['reset']) && !empty($_GET['code']) && (time() - substr($_GET['co
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="row footer">
-            <div class="col-sm-6">
-                <p>
-                    Graphic Art by <a href="http://www.spore.com/sporepedia#qry=usr-Fotosynthesis%7C2267038817">Fotosynthesis</a>, <a href="http://cryotube.deviantart.com/?rnrd=89523">cryotube</a>, &amp; <a href="http://www.vrt-designs.com/">vrt</a>
-                    <br />
-                    Ver. 1.327
-                </p>
-            </div>
-            <div class="col-sm-6">
-                <p class="right">
-                    Music by Jordan Meister &amp; Justin Carpenter
-                    <br />
-                    Elements is property of Zanzarino Design
-                    <br />
-                    All Rights Reserved. &copy; 2011-2016
-                </p>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        Graphic Art by <a href="http://www.spore.com/sporepedia#qry=usr-Fotosynthesis%7C2267038817">Fotosynthesis</a>, <a href="http://cryotube.deviantart.com/?rnrd=89523">cryotube</a>, &amp; <a href="http://www.vrt-designs.com/">vrt</a>
+                        <br />
+                        Ver. 1.327
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <p class="right">
+                        Music by Jordan Meister &amp; Justin Carpenter
+                        <br />
+                        Elements is property of Zanzarino Design
+                        <br />
+                        All Rights Reserved. &copy; 2011-2016
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
+    </footer>
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
