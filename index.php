@@ -23,12 +23,12 @@ if(!empty($_GET['reset']) && !empty($_GET['code']) && (time() - substr($_GET['co
     <link rel="stylesheet" href="includes/css/style.css" />
   </head>
   <body>
+    <div class="bgWrapper"><img id="bgImage" src="includes/images/bg_low.png" alt="Background" /></div>
     <div class="container">
         <div class="row logoWrapper">
-            <div class="col-md-8 col-md-offset-2 col-sm-4 col-sm-offset-4">
+            <div class="col-md-8 col-md-offset-2">
                 <p class="center">
                     <img src="includes/images/logo.png" class="logo" />
-                    <img src="" id="bg_load" />
                 </p>
             </div>
         </div>

@@ -248,7 +248,7 @@ $(function() {
         }
     });
 
-    $("#bg_load").one("load", function() {
-        $("html,body").css("background-image", "url('includes/images/bg.jpg')");
+    $("#bgImage").one("load", function() {
+        $(".bgWrapper").css("background-image", "url('includes/images/bg.jpg')");
     }).attr("src", "includes/images/bg.jpg");
 });
