@@ -1,7 +1,7 @@
 <?php 
 require_once('includes/php/config.php');
 
-if(!empty($_GET['reset']) && !empty($_GET['code'])) {
+if(!empty($_GET['reset']) && !empty($_GET['code']) && (time() - substr($_GET['code'], 4, strlen($_GET['code'])-8)) < (60 * 60 * 24)) {
     $code = $db->real_escape_string($_GET['code']);
     $result = $db->query("SELECT username FROM Brawl5Round3_users WHERE trouble_code = '$code'");
     if($result->num_rows != 1) {

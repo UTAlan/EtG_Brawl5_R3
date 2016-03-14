@@ -7,4 +7,4 @@ if(empty($_POST['password']) || empty($_POST['confirm'])) {
 }
 $username = $db->real_escape_string($_POST['username']);
 $password = sha1($_POST['password']);
-$db->query("UPDATE Brawl5Round3_users SET password = '$password' WHERE username = '$username'");
+$db->query("UPDATE Brawl5Round3_users SET password = '$password', trouble_code = ''  WHERE username = '$username'");
