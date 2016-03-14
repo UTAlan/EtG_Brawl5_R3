@@ -9,13 +9,13 @@ html,body {
 .logo { width: 100%; }
 #bg_load { display: none; }
 .content { 
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 10px; 
     border: solid 1px #FFF; 
     background-color: rgba(0,0,0,0.5);  
 }
 .content input { width: 100%; margin-bottom: 5px; border-radius: 5px; padding-top: 2px; padding-bottom: 2px; }
-.content a { 
+.content a:not(.link) { 
     color: #FFF; 
     text-decoration: none; 
     background-color: rgba(0,0,0,0.5); 
@@ -27,8 +27,9 @@ html,body {
     margin-bottom: 5px;
     text-align: center;
 }
-#errorMessage { text-align: center; color: #F00; }
-#successMessage { text-align: center; color: #0F0; }
+#muteButton img { height: 16px; }
+.error { text-align: center; color: #F00; }
+.success { text-align: center; color: #0F0; }
 #loginLink, #signup_cancel, #trouble_cancel, #trouble_submit, #reset_submit, #reset_cancel { width: 45%; margin-right: 5%; }
 #signupLink, #signup_submit { width: 45%; margin-left: 5%; }
 #troubleLink { width: 100%; }

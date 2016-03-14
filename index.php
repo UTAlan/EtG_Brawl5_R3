@@ -35,15 +35,14 @@ if(!empty($_GET['reset']) && !empty($_GET['code']) && (time() - substr($_GET['co
 
         <div class="row">
             <div class="content col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
-                <?php echo '<audio autoplay loop><source src="includes/music/' . (mt_rand(1, 100) == 100 ? 'chaosomes' : 'theme') . '.mp3"></audio>'; ?>
-                <div class="row" id="errorWrapper">
-                    <div class="col-xs-12">
+                <?php echo '<audio id="bg_music" autoplay loop><source src="includes/music/' . (mt_rand(1, 100) == 100 ? 'chaosomes' : 'theme') . '.mp3"></audio>'; ?>
+                <div class="row" id="messageWrapper">
+                    <div class="col-xs-10 col-xs-offset-1">
                         <p class="error" id="errorMessage"></p>
+                        <p class="success" id="successMessage"></p>
                     </div>
-                </div>
-                <div class="row" id="successWrapper">
-                    <div class="col-xs-12">
-                        <p class="error" id="successMessage"></p>
+                    <div class="col-xs-1">
+                        <p class="right"><a href="#" id="muteButton" class="muteOff link"><img src="includes/images/mute_off.png" alt="Mute" /></a></p>
                     </div>
                 </div>
                 <div class="row" id="loginFormWrapper">

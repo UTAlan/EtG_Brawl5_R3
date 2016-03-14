@@ -1,7 +1,5 @@
 function clearErrors() {
-    $("#errorWrapper").hide();
     $("#errorMessage").html('');
-    $("#successWrapper").hide();
     $("#successMessage").html('');
 }
 function validateLoginForm() {
@@ -9,7 +7,6 @@ function validateLoginForm() {
     var pass = $("#password").val();
     if(user == "" || pass == "") {
         $("#errorMessage").html('You must provide a username and password. Please try again.');
-        $("#errorWrapper").show();
         return false;
     } else {
         return true;
@@ -31,7 +28,6 @@ function validateSignupForm() {
     }
     if(msg != '') {
         $("#errorMessage").html(msg);
-        $("#errorWrapper").show();
         return false;
     } else {
         return true;
@@ -50,7 +46,6 @@ function validateTroubleForm() {
     }
     if(msg != '') {
         $("#errorMessage").html(msg);
-        $("#errorWrapper").show();
         return false;
     } else {
         return true;
@@ -71,7 +66,6 @@ function validateResetForm() {
     }
     if(msg != "") {
         $("#errorMessage").html(msg);
-        $("#errorWrapper").show();
         return false;
     } else {
         return true;
@@ -83,6 +77,18 @@ function isValidEmailAddress(emailAddress) {
 };
 
 $(function() {
+    $("#muteButton").click(function() {
+        if($(this).hasClass("muteOff")) {
+            $(this).removeClass("muteOff").addClass("muteOn");
+            $("#muteButton img").attr("src", "includes/images/mute_on.png");
+            $("#bg_music").prop("muted", true);
+        } else {
+            $(this).removeClass("muteOn").addClass("muteOff");
+            $("#muteButton img").attr("src", "includes/images/mute_off.png");
+            $("#bg_music").prop("muted", false);
+        }
+        return false;
+    })
     $("#loginForm").submit(function() {
         clearErrors();
         if(validateLoginForm()) {
@@ -90,10 +96,8 @@ $(function() {
                 if(data.length == 0) {
                     $("#loginFormWrapper").hide();
                     $("#successMessage").html('You have successfully logged in!');
-                    $("#successWrapper").show();
                 } else {
                     $("#errorMessage").html(data);
-                    $("#errorWrapper").show();
                 }
             });
         } 
@@ -120,13 +124,11 @@ $(function() {
                     $("#username").val($("#signup_username").val());
                     $("#signupForm").trigger("reset");
                     $("#successMessage").html('You have successfully signed up! Please login below.');
-                    $("#successWrapper").show();
                     $("#signupFormWrapper").hide("slide", { direction: "right" }, 200, function() {
                         $("#loginFormWrapper").show("slide", { direction: "left" }, 200);
                     });
                 } else {
                     $("#errorMessage").html(data);
-                    $("#errorWrapper").show();
                 }
             });
         }
@@ -176,13 +178,11 @@ $(function() {
                 if(data.length == 0) {
                     $("#troubleForm").trigger("reset");
                     $("#successMessage").html('Your password has been reset. Please check your email.')
-                    $("#successWrapper").show();
                     $("#troubleFormWrapper").hide("slide", { direction: "right" }, 200, function() {
                         $("#loginFormWrapper").show("slide", { direction: "left" }, 200);
                     });
                 } else {
                     $("#errorMessage").html(data);
-                    $("#errorWrapper").show();
                 }
             });
         }
@@ -217,13 +217,11 @@ $(function() {
                     $("#username").val($("#reset_username").val());
                     $("#resetForm").trigger("reset");
                     $("#successMessage").html('Your password has been saved. Please login below.')
-                    $("#successWrapper").show();
                     $("#resetFormWrapper").hide("slide", { direction: "right" }, 200, function() {
                         $("#loginFormWrapper").show("slide", { direction: "left" }, 200);
                     });
                 } else {
                     $("#errorMessage").html(data);
-                    $("#errorWrapper").show();
                 }
             });
         }
