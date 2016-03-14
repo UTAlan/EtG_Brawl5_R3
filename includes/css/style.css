@@ -1,0 +1,42 @@
+html,body {
+    background: url('../images/bg_low.png') no-repeat center center fixed;
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+}
+.logo { width: 100%; visibility: hidden; }
+#bg_load { display: none; }
+.content { 
+    padding: 20px;
+    border-radius: 10px; 
+    border: solid 1px #FFF; 
+    background-color: rgba(0,0,0,0.5);  
+}
+.content input { width: 100%; margin-bottom: 5px; border-radius: 5px; padding-top: 2px; padding-bottom: 2px; }
+.content a { 
+    color: #FFF; 
+    text-decoration: none; 
+    background-color: rgba(0,0,0,0.5); 
+    border-radius: 5px; 
+    border: solid 1px #FFF; 
+    padding: 3px;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#errorMessage { text-align: center; color: #F00; }
+#successMessage { text-align: center; color: #0F0; }
+#loginLink, #signup_cancel, #trouble_cancel, #trouble_submit, #reset_submit, #reset_cancel { width: 45%; margin-right: 5%; }
+#signupLink, #signup_submit { width: 45%; margin-left: 5%; }
+#troubleLink { width: 100%; }
+#errorWrapper, #successWrapper, #signupFormWrapper, #troubleFormWrapper, #resetFormWrapper { display: none; }
+.footer { margin-top: 50px; color: #FFF; text-shadow: 1px 1px #000; font-size: 0.8em; }
+.footer a { color: #FFF; text-decoration: underline; text-shadow: 1px 1px #000; }
+.center { text-align: center; }
+.right { text-align: right; }
+.hidden { display: none; }
+@media screen and (max-width: 480px) {
+    .footer p { text-align: center !important; }
+}
