@@ -6,7 +6,7 @@ html,body {
     background-size: cover;         /* Generic*/
     height: 100%;
 }
-.logo { width: 100%; }
+.logo { width: 50%; }
 #bg_load { display: none; }
 .content { 
     padding: 10px 20px;
@@ -32,13 +32,16 @@ html,body {
 .success { text-align: center; color: #0F0; }
 #loginLink, #signup_cancel, #trouble_cancel, #trouble_submit, #reset_submit, #reset_cancel { width: 45%; margin-right: 5%; }
 #signupLink, #signup_submit { width: 45%; margin-left: 5%; }
-#troubleLink { width: 100%; }
+#troubleLink, #trouble_cancel, #trouble_submit { width: 100%; }
 #errorWrapper, #successWrapper, #signupFormWrapper, #troubleFormWrapper, #resetFormWrapper { display: none; }
-footer { position: fixed; bottom: 0; width: 100%; color: #FFF; text-shadow: 1px 1px #000; font-size: 0.8em; }
+footer { position: absolute; bottom: 0; width: 100%; color: #FFF; text-shadow: 1px 1px #000; font-size: 0.8em; }
 footer a { color: #FFF; text-decoration: underline; text-shadow: 1px 1px #000; }
+footer.fix { position: relative; }
 .center { text-align: center; }
 .right { text-align: right; }
 .hidden { display: none; }
 @media screen and (max-width: 480px) {
+    #trouble_cancel, #trouble_submit { width: 100%; }
+    footer { position: relative; margin-top: 150px; }
     footer p { text-align: center !important; }
 }

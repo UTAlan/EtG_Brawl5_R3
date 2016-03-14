@@ -24,8 +24,8 @@ if(!empty($_GET['reset']) && !empty($_GET['code']) && (time() - substr($_GET['co
   </head>
   <body>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
+        <div class="row logoWrapper">
+            <div class="col-md-8 col-md-offset-2 col-sm-4 col-sm-offset-4">
                 <p class="center">
                     <img src="includes/images/logo.png" class="logo" />
                     <img src="" id="bg_load" />
@@ -33,15 +33,15 @@ if(!empty($_GET['reset']) && !empty($_GET['code']) && (time() - substr($_GET['co
             </div>
         </div>
 
-        <div class="row">
+        <div class="row contentWrapper">
             <div class="content col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
                 <?php echo '<audio id="bg_music" autoplay loop><source src="includes/music/' . (mt_rand(1, 100) == 100 ? 'chaosomes' : 'theme') . '.mp3"></audio>'; ?>
                 <div class="row" id="messageWrapper">
-                    <div class="col-xs-10 col-xs-offset-1">
+                    <div class="col-sm-10 col-sm-offset-1">
                         <p class="error" id="errorMessage"></p>
                         <p class="success" id="successMessage"></p>
                     </div>
-                    <div class="col-xs-1">
+                    <div class="col-sm-1">
                         <p class="right"><a href="#" id="muteButton" class="muteOff link"><img src="includes/images/mute_off.png" alt="Mute" /></a></p>
                     </div>
                 </div>
@@ -78,7 +78,11 @@ if(!empty($_GET['reset']) && !empty($_GET['code']) && (time() - substr($_GET['co
                     </div>
                     <div class="col-xs-7">
                         <input type="text" name="email" id="trouble_email" placeholder="Email Address" />
+                    </div>
+                    <div class="col-xs-5 col-sm-3 col-sm-offset-5">
                         <a id="trouble_cancel" href="#">Cancel</a>
+                    </div>
+                    <div class="col-xs-7 col-sm-4">
                         <a id="trouble_submit" href="#">Reset Password</a>
                     </div>
                 </form>
