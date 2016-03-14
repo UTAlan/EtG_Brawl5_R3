@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="http://elementscommunity.org/favicon.ico?v=darkness" />
     <title>Elements The Game</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <style>
@@ -64,6 +65,7 @@
 
         <div class="row">
             <div class="content col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+                <?php echo '<audio autoplay loop><source src="' . (rand(1, 100) == 100 ? 'chaosomes' : 'theme') . '.mp3"></audio>'; ?>
                 <div class="row" id="errorWrapper">
                     <div class="col-xs-12">
                         <p class="error" id="errorMessage"></p>
@@ -76,10 +78,10 @@
                 </div>
                 <div class="row" id="loginFormWrapper">
                     <div class="col-xs-5">
-                    <form action="#" method="post" id="loginForm">
+                        <form action="#" method="post" id="loginForm">
                         <input type="text" name="username" id="username" placeholder="Username" />
                         <input type="password" name="password" id="password" placeholder="Password" />
-                    </form>
+                        </form>
                     </div>
                     <div class="col-xs-7">
                         <a id="loginLink" href="#">Login</a>
