@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <style>
         html,body {
-            background: url('bg.png') no-repeat center center fixed;
+            background: url('bg_low.png') no-repeat center center fixed;
             -webkit-background-size: cover; /* For WebKit*/
             -moz-background-size: cover;    /* Mozilla*/
             -o-background-size: cover;      /* Opera*/
             background-size: cover;         /* Generic*/
         }
         .logo { width: 100%; visibility: hidden; }
+        #bg_load { display: none; }
         .content { 
             padding: 20px;
             border-radius: 10px; 
@@ -47,7 +48,10 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
-                <p class="center"><img src="logo.png" class="logo" /></p>
+                <p class="center">
+                    <img src="logo.png" class="logo" />
+                    <img src="" id="bg_load" />
+                </p>
             </div>
         </div>
 
@@ -93,17 +97,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script>
     $(function() {
-      $("#loginForm").submit(function() {
+        $("#loginForm").submit(function() {
         return false;
-      });
+        });
 
-      $("#signupLink").click(function() {
+        $("#signupLink").click(function() {
         return false;
-      });
+        });
 
-      $("#troubleLink").click(function() {
+        $("#troubleLink").click(function() {
         return false;
-      });
+        });
+
+        $("#bg_load").one("load", function() {
+            $("html,body").css("background-image", "url('bg.png')");
+        }).attr("src", "bg.png");
     });
     </script>
   </body>
