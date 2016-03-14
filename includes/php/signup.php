@@ -4,7 +4,7 @@ $username = $db->real_escape_string($_POST['username']);
 $password = sha1($_POST['password']);
 $email_address = $db->real_escape_string($_POST['email']);
 if(empty($username) || empty($_POST['password']) || empty($email_address)) {
-    die('You must provide a username, password, and email address. Please try again.');
+    die('You must provide a username, password, and email address.');
 }
 $results = $db->query("SELECT id FROM Brawl5Round3_users WHERE username = '$username'");
 if($results->num_rows > 0) {

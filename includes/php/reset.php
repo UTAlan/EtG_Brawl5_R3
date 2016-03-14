@@ -3,7 +3,7 @@ require_once("config.php");
 if(empty($_POST['password']) || empty($_POST['confirm'])) {
     die("Please enter your new password twice.");
 } else if($_POST['password'] != $_POST['confirm']) {
-    die("Passwords do not match. Please try again.");
+    die("Passwords do not match.");
 }
 $username = $db->real_escape_string($_POST['username']);
 $password = sha1($_POST['password']);

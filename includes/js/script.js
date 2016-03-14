@@ -6,7 +6,7 @@ function validateLoginForm() {
     var user = $("#username").val();
     var pass = $("#password").val();
     if(user == "" || pass == "") {
-        $("#errorMessage").html('You must provide a username and password. Please try again.');
+        $("#errorMessage").html('You must provide a username and password.');
         return false;
     } else {
         return true;
@@ -18,7 +18,7 @@ function validateSignupForm() {
     var email = $("#signup_email").val();
     var msg = '';
     if(user == "" || pass == "" || email == "") {
-        msg = 'You must provide a username, password, and email address. Please try again.';
+        msg = 'You must provide a username, password, and email address.';
     } else if(user.length < 3) {
         msg = 'Username must be at least 3 characters long.';
     } else if(pass.length < 4) {
@@ -62,7 +62,7 @@ function validateResetForm() {
     if(password == "" || confirm == "") {
         msg = "Please enter your new password twice.";
     } else if(password != confirm) {
-        msg = "The passwords do not match. Please try again.";
+        msg = "The passwords do not match.";
     }
     if(msg != "") {
         $("#errorMessage").html(msg);

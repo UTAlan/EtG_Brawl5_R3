@@ -3,11 +3,11 @@ require_once('config.php');
 $username = $db->real_escape_string($_POST['username']);
 $email_address = $db->real_escape_string($_POST['email']);
 if(empty($username) || empty($email_address)) {
-    die('You must provide a username and email address. Please try again.');
+    die('You must provide a username and email address.');
 }
 $result = $db->query("SELECT id FROM Brawl5Round3_users WHERE username = '$username' AND email_address = '$email_address'");
 if($result->num_rows != 1) {
-    die('Invalid username or email address. Please try again.');
+    die('Invalid username or email address.');
 } else {
     $row = $result->fetch_assoc();
     $code = rand(1000, 9999) . time() . rand(1000, 9999);
